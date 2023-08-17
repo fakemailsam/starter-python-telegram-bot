@@ -3,6 +3,6 @@ from fastapi import FastAPI, Header, HTTPException, Depends
 
 app = FastAPI()
 
-@app.get("/items/")
-def read_root():
-    return 'hello'
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
